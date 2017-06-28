@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>音乐维护</title>
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="../static/stylesheet" href="css/style.css" />
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+  </head>
+  <body>
+  	<div class="row">
+		  	<div class="col-md-2 text-center">
+		  			<img src="../static/img/rt-control_pic19.png" height="40"/>
+			  </div>
+				<div class="col-md-10 ">
+						<div class="fr">
+							<a href="" class="out_a"><span class="glyphicon glyphicon glyphicon-user"></span>admin</a>
+						  <a href="" class="out_a">后台页面</a>
+						  <a href="" class="out_a"><span class="glyphicon glyphicon-log-out"></span>退出</a>	
+						</div>
+			  </div>
+		</div>
+  	<div class="row">
+			  <div class="col-md-2">
+			  		<dl>
+							  <dt>日志</dt>
+							  <dd><a href="Backstage_index.html">后台登录日志</a></dd>
+							  <dd><a href="Operation_log.html">操作日志</a></dd>
+						</dl>
+						<dl>
+							  <dt>管理员</dt>
+							  <dd><a href="Admin_maintain.html">管理员维护</a></dd>
+						</dl>
+						<dl>
+							  <dt>音乐</dt>
+							  <dd><a href="Music_index.html">音乐维护</a></dd>
+						</dl>
+			  </div>
+			  <div class="col-md-10">
+		  		<ol class="breadcrumb">
+					  <li><a href="#">当前位置：</a></li>
+					  <li><a href="#">首页</a></li>
+					  <li class="active">音乐维护</li>
+					</ol>
+					<div>
+	  				<h3 style="display: inline-block;">音乐维护</h3>
+	  				<button type="button" class="btn btn-default fr add" data-toggle="modal" data-target="#myModal">新增</button>
+				  </div>
+					<table class="table table-striped table-bordered table-hover modify_btn admin_table">
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>音乐名</th>
+								<th>URL</th>
+								<th>图片</th>
+								<th>歌手</th>
+								<th>类型</th>
+								<th>状态</th>
+								<th>添加日期</th>
+								<th>操作</th>
+						</tr>
+						</thead>
+						<tbody>
+							
+						</tbody>
+					</table>
+					<nav aria-label="Page navigation">
+					  <ul class="pagination">
+					    <li>
+					      <a href="#" aria-label="Previous">
+					        <span aria-hidden="true"><!--&laquo;-->首页</span>
+					      </a>
+					    </li>
+					    <li><a href="#">1</a></li>
+					    <li><a href="#">2</a></li>
+					    <li><a href="#">3</a></li>
+					    <li><a href="#">4</a></li>
+					    <li><a href="#">5</a></li>
+					    <li>
+					      <a href="#" aria-label="Next">
+					        <span aria-hidden="true"><!--&raquo;-->尾页</span>
+					      </a>
+					    </li>
+					  </ul>
+					</nav>
+	  		</div>
+		</div>
+		<!--新增-->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		    <div class="modal-dialog">
+		        <div class="modal-content">
+		            <div class="modal-header">
+		                <button type="button" class="close" data-dismiss="modal"
+		                        aria-hidden="true">×
+		                </button>
+		                <h4 class="modal-title" id="myModalLabel">
+		                    	添加/修改音乐
+		                </h4>
+		            </div>
+		            <div class="modal-body">
+                		<form class="form-horizontal">
+											  <div class="form-group">
+											    <label for="inputEmail3" class="col-sm-2 control-label">歌曲名</label>
+											    <div class="col-sm-10">
+											      <input type="text" class="form-control Song_name" id="inputEmail3" placeholder="请输入歌曲名">
+											    </div>
+											  </div>
+											  <div class="form-group">
+											    <label for="inputPassword3" class="col-sm-2 control-label">歌曲URL</label>
+											    <div class="col-sm-10">
+											      <input type="password" class="form-control Song_url" id="inputPassword3" placeholder="请输入歌曲URL">
+											    </div>
+											  </div>
+											  <div class="form-group">
+											    <label for="inputPassword4" class="col-sm-2 control-label">歌曲图片</label>
+											    <div class="col-sm-10">
+											      <input type="password" class="form-control Song_img" id="inputPassword4" placeholder="请输入歌曲图片">
+											    </div>
+											  </div>
+											  <div class="form-group">
+											    <label for="inputPassword5" class="col-sm-2 control-label">歌手名</label>
+											    <div class="col-sm-10">
+											      <input type="password" class="form-control Song_people" id="inputPassword5" placeholder="请输入歌手名">
+											    </div>
+											  </div>
+											  <div class="form-group">
+											  		<label for="exampleInputName2" class="col-sm-2 control-label">类别</label>
+													  <div class="btn-group col-sm-10">
+														  <select class="form-control Song_class">
+														  	<option value="0" selected="selected">未知</option>
+															  <option value="1" >现代音乐</option>
+															  <option value="2">古典音乐</option>
+															</select>
+														</div>
+												</div>	
+											  <div class="form-group">
+											  		<label for="inputPassword3" class="col-sm-2 control-label">状态</label>
+											  		<div class="col-sm-10 ">
+																<label class="radio-inline">
+																  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"> 禁用
+																</label>
+																<label class="radio-inline">
+																  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="0"  checked = "checked"> 正常
+																</label>
+														 </div>		
+												</div>
+										</form>
+		            </div>
+		            <div class="modal-footer">
+		                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+		                <button type="button" class="btn btn-primary" id="submitform">提交更改</button>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		<!--修改-->
+		<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		    <div class="modal-dialog">
+		        <div class="modal-content">
+		            <div class="modal-header">
+		                <button type="button" class="close" data-dismiss="modal"
+		                        aria-hidden="true">×
+		                </button>
+		                <h4 class="modal-title" id="myModalLabel1">
+		                    	添加/修改音乐
+		                </h4>
+		            </div>
+		            <div class="modal-body">
+                		<form class="form-horizontal">
+											  <div class="form-group">
+											    <label for="inputEmail3" class="col-sm-2 control-label">歌曲名</label>
+											    <div class="col-sm-10">
+											      <input type="text" class="form-control Song_name" id="inputEmail5" placeholder="请输入歌曲名">
+											    </div>
+											  </div>
+											  <div class="form-group">
+											    <label for="inputPassword3" class="col-sm-2 control-label">歌曲URL</label>
+											    <div class="col-sm-10">
+											      <input type="password" class="form-control Song_url" id="inputPassword6" placeholder="请输入歌曲URL">
+											    </div>
+											  </div>
+											  <div class="form-group">
+											    <label for="inputPassword4" class="col-sm-2 control-label">歌曲图片</label>
+											    <div class="col-sm-10">
+											      <input type="password" class="form-control Song_img" id="inputPassword6" placeholder="请输入歌曲图片">
+											    </div>
+											  </div>
+											  <div class="form-group">
+											    <label for="inputPassword5" class="col-sm-2 control-label">歌手名</label>
+											    <div class="col-sm-10">
+											      <input type="password" class="form-control Song_people" id="inputPassword7" placeholder="请输入歌手名">
+											    </div>
+											  </div>
+											  <div class="form-group">
+											  		<label for="exampleInputName2" class="col-sm-2 control-label">类别</label>
+													  <div class="btn-group col-sm-10">
+														  <select class="form-control Song_class">
+														  	<option value="0" selected="selected">未知</option>
+															  <option value="1" >现代音乐</option>
+															  <option value="2">古典音乐</option>
+															</select>
+														</div>
+												</div>	
+											  <div class="form-group">
+											  		<label for="inputPassword3" class="col-sm-2 control-label">状态</label>
+											  		<div class="col-sm-10 ">
+																<label class="radio-inline">
+																  <input type="radio" name="inlineRadioOptions1" id="inlineRadio3" value="1"> 禁用
+																</label>
+																<label class="radio-inline">
+																  <input type="radio" name="inlineRadioOptions1" id="inlineRadio4" value="0"  checked = "checked"> 正常
+																</label>
+														 </div>		
+												</div>
+										</form>
+		            </div>
+		            <div class="modal-footer">
+		                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+		                <button type="button" class="btn btn-primary" id="submitform">提交更改</button>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script>
+    	$(document).ready(function(){
+    		$.ajax({
+    			url:"http://wangwei.hangyutech.com/study/music.php",
+    			datatype:"json",
+    			type:"get",
+    			anync:false,
+    			success:function(value){
+    				var td="";
+    				for(var i=0;i<value.data.length;i++){
+	    				td+="<tr>";
+	    				td+="<td>"+value.data[i].id+"</td>";
+	    				td+="<td>"+value.data[i].title+"</td>";
+	    				td+="<td>"+value.data[i].url+"</td>";
+	    				td+="<td>"+value.data[i].img+"</td>";
+	    				td+="<td>"+value.data[i].singer+"</td>";
+	    				switch(value.data[i].type){
+	    					case"0":
+	    					type="未知";
+	    					break;
+	    					case "1":
+	    					type="现代音乐";
+	    					break;
+	    					case "2":
+	    					type="古典音乐";
+	    					break;
+	    					default:
+	    					type=""
+	    				}
+	    				td+="<td>"+type+"</td>";
+	    				var status=value.data[i].status;
+							if(status==0){
+	    					status="正常";
+	    				}else if(status==1){
+	    					status="禁用";}
+	    				td+="<td>"+status+"</td>";
+	    				
+	    				td+="<td>"+value.data[i].created_time+"</td>";
+	    				td+="<td><button type=\"button\" class=\"btn btn-default\" data-toggle=\"modal\" data-target=\"#myModal\">修改</button></td>";
+	    				td+="</tr>";
+    				}
+    				$(".table tbody").html(td);
+    			}
+    			});	
+    		});
+    </script>
+    <script>
+    	$("dt").click(function(){
+    		$("dd").hide();
+    		$(this).siblings().show();
+    	});
+    </script>
+    
+    <!--新建-->
+    <script>
+    	$(document).ready(function(){
+		        //当id  submitform 被点击时
+		        $("#submitform").click(function(){
+		        		var data={
+		        			title:$(".Song_name").val(),
+		        	 	 	url:$(".Song_url").val(),
+		        	 		img:$(".Song_img").val(),
+		        	 		singer:$(".Song_people").val(),
+		        	 	 	type:$(".Song_class").val(),
+		        			status:$("input[name='inlineRadioOptions']:checked").val(),
+		        		};
+		        		 $.ajax({
+		                    url: "http://wangwei.hangyutech.com/study/music-add.php" ,
+		                    type: "post",
+		                    dataType: "json",
+		                    //data:$('#yourformid').serialize(),
+		                    data:data,
+		                    async: false,
+		                    success: function(json){
+		                        //对json进行后续处理
+													if(json.status==1){
+														alert(json.msg);
+														$("input").val("");
+													}else{
+														alert(json.msg);
+													}
+		                        //关闭模态框
+		                        $('#myModal').modal('hide');
+		                    },
+		                    error: function(){
+		                        console.log( "AJAX fail");
+		                    }
+	                   });
+		        });
+		    });
+		</script>
+		<!--修改-->
+		<script>
+    	$(document).ready(function(){
+		        //当id  submitform 被点击时
+		        $("#submitform").click(function(){
+		        		var data={
+		        			title:$(".Song_name").val(),
+		        	 	 	url:$(".Song_url").val(),
+		        	 		img:$(".Song_img").val(),
+		        	 		singer:$(".Song_people").val(),
+		        	 	 	type:$(".Song_class").val(),
+		        			status:$("input[name='inlineRadioOptions']:checked").val(),
+		        		};
+		        		 $.ajax({
+		                    url: "http://wangwei.hangyutech.com/study/music-add.php" ,
+		                    type: "post",
+		                    dataType: "json",
+		                    //data:$('#yourformid').serialize(),
+		                    data:data,
+		                    async: false,
+		                    success: function(json){
+		                        //对json进行后续处理
+													if(json.status==1){
+														alert(json.msg);
+														$("input").val("");
+													}else{
+														alert(json.msg);
+													}
+		                        //关闭模态框
+		                        $('#myModal').modal('hide');
+		                    },
+		                    error: function(){
+		                        console.log( "AJAX fail");
+		                    }
+	                   });
+		        });
+		    });
+		</script>
+		
+  </body>
+</html>
+
+
+
